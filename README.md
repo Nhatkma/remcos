@@ -52,7 +52,7 @@ Thực hiện điều khiển từ xa qua Remcos
 
 Xóa file gốc sau khi lấy cắp thành công
 
-# Ii,Phân Tích LOG Sau Tấn Công
+# II,Phân Tích LOG Sau Tấn Công
 
 # 1. Phân Tích Log Windows
 
