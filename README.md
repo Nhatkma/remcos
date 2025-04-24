@@ -11,8 +11,8 @@ Dự án mô phỏng kịch bản tấn công vào hệ thống Windows bằng p
 # Kali Linux (IP: 192.168.1.137)
    - Mã độc Remcos v6.1.0 Light (tải từ trang chủ Remcos)
 # Điều kiện 2 máy ping được nhau
-# Các Bước Thực Hiện
-1. Khai Thác Brute-force Dịch Vụ RDP
+# I,Các Bước Thực Hiện
+# 1. Khai Thác Brute-force Dịch Vụ RDP
 
 Tạo file user.txt và pass.txt trên Kali
 
@@ -30,7 +30,7 @@ Username: nhatnm
 
 Password: 23032004
 
-2. Triển Khai Mã Độc Remcos
+# 2. Triển Khai Mã Độc Remcos
 
 Dựng HTTP server bằng Python:
 
@@ -44,7 +44,7 @@ Thêm registry để thiết lập persistence:
 
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v remcos /t REG_SZ /d "C:\Users\Public\remcos.exe"
 
-3. Thực Thi Tấn Công RCE và Xóa File
+# 3. Thực Thi Tấn Công RCE và Xóa File
 
 Thực hiện điều khiển từ xa qua Remcos
 
@@ -52,9 +52,9 @@ Thực hiện điều khiển từ xa qua Remcos
 
 Xóa file gốc sau khi lấy cắp thành công
 
-Phân Tích Sau Tấn Công
+# Ii,Phân Tích LOG Sau Tấn Công
 
-1. Phân Tích Log Windows
+# 1. Phân Tích Log Windows
 
 Event ID 4625: Nhiều lần đăng nhập thất bại (brute-force)
 
@@ -64,7 +64,7 @@ Sysmon ID 3: Ghi nhận kết nối mạng bất thường
 
 Sysmon ID 1: Ghi nhận quá trình thêm registry (persistence)
 
-2. Kết Luận
+# 2. Kết Luận
 
 Nguồn tấn công: 192.168.1.137 (máy Kali)
 
